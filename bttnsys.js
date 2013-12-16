@@ -1,5 +1,5 @@
 // Filename: bttnsys.js
-// Timestamp: 2013.12.15-21:12:34 (last modified)  
+// Timestamp: 2013.12.15-23:10:02 (last modified)  
 // Author(s): Bumblehead (www.bumblehead.com)
 // Requires: bttn.js, lsn.js, domev.js
 
@@ -52,7 +52,7 @@ var bttnsys = (function (proto, constructor) {
     },
 
     getEventElem : function (e) {
-      domev.getElemAt(e);
+      return domev.getElemAt(e);
     },
 
     getElemMatchedBttn : function (elem) {
