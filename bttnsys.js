@@ -1,5 +1,5 @@
 // Filename: bttnsys.js
-// Timestamp: 2013.12.15-23:10:02 (last modified)  
+// Timestamp: 2015.03.08-19:13:35 (last modified)  
 // Author(s): Bumblehead (www.bumblehead.com)
 // Requires: bttn.js, lsn.js, domev.js
 
@@ -69,8 +69,12 @@ var bttnsys = (function (proto, constructor) {
           type = that.type,
           elem = that.getEventElem(e),
           bttn = that.getElemMatchedBttn(elem);
-
+      
       if (bttn) {
+        if (bttn.isActive() && !that.isunselect) {
+          return bttn.handleEvent(e);
+        }
+
         // bttn becomes active and only one button may be active...
         if (type === 'single' && !bttn.isActive()) {
           that.deactivateall();
@@ -108,6 +112,7 @@ var bttnsys = (function (proto, constructor) {
     that.bttnArr = [];
     that.type = spec.type;
     that.name = spec.name;
+    that.isunselect = spec.isunselect ? true : false;
     that.attach();
 
     return that;
