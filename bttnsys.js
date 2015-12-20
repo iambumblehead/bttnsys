@@ -1,9 +1,12 @@
 // Filename: bttnsys.js
-// Timestamp: 2015.03.08-19:13:35 (last modified)  
+// Timestamp: 2015.12.20-01:24:39 (last modified)
 // Author(s): Bumblehead (www.bumblehead.com)
-// Requires: bttn.js, lsn.js, domev.js
 
-var bttnsys = (function (proto, constructor) {
+var lsn = require('lsn'),
+    bttn = require('bttn'),
+    domev = require('domev');
+
+var bttnsys = module.expots = (function (proto, constructor) {
 
   proto = {
     bttnArr : [],

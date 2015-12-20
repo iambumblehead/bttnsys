@@ -1,6 +1,8 @@
 {
   "name": "bttnsys",
-  "version": "0.0.4",
+  "main": "bttnsys",
+  
+  "version": "0.0.5",
   "readmeFilename": "README.md",
   "license" : "MIT",
   "description": "construct click functionality around grouped elements",
